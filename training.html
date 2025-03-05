@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroFlex - EEG Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NeuroFlex EEG Training</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="training.html" class="nav-link active">EEG Training</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="training-section">
+            <div class="training-info">
+                <h2>Train Your Brainwaves</h2>
+                <p>Select a function to train and record your brainwaves:</p>
+                <form id="train-form">
+                    <label for="brainwave_data">Select a function to train:</label>
+                    <select id="brainwave_data" name="brainwave_data">
+                        <option value="resting">Resting</option>
+                        <option value="standing">Standing</option>
+                        <option value="walking">Walking</option>
+                        <option value="sitting_down">Sitting Down</option>
+                        <option value="standing_up">Standing Up</option>
+                    </select>
+                    <button type="submit" class="btn">Record</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+            <img src="images/brainwave-icon.png" alt="Brainwave Training" class="training-img">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NeuroFlex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

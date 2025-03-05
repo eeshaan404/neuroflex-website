@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroFlex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NeuroFlex</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="training.html" class="nav-link">EEG Training</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Transform Your Brainwaves</h2>
+            <p>Train and record your brainwaves for specific functions like standing, walking, and more.</p>
+            <a href="training.html" class="btn">Start Training</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-image.png" alt="NeuroFlex Training">
+        </div>
+    </section>
+
+    <!-- EEG Training Section with Clickable Tab Bar -->
+    <section class="tabs">
+        <div class="tab-bar">
+            <button class="tab-button active" id="tab-1">EEG Training</button>
+            <button class="tab-button" id="tab-2">About NeuroFlex</button>
+        </div>
+        <div class="tab-content" id="tab-1-content">
+            <h3>EEG Training</h3>
+            <p>Record your brainwaves for different functions such as standing, walking, resting, sitting down, and standing up.</p>
+            <a href="training.html" class="btn">Start EEG Training</a>
+        </div>
+        <div class="tab-content" id="tab-2-content" style="display: none;">
+            <h3>About NeuroFlex</h3>
+            <p>NeuroFlex is designed to help you train and record your brainwaves to improve daily functions and well-being.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NeuroFlex. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to switch between tabs
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.id.replace('tab-', '');
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.style.display = 'none');
+                button.classList.add('active');
+                document.getElementById(`tab-${targetId}-content`).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
